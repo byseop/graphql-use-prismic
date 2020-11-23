@@ -1,26 +1,24 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { gql } from 'apollo-boost';
 import usePrismic from '../hooks/usePrismic';
 import { useDispatch } from 'react-redux';
 import { changeLocale } from '../modules/locale';
 
-function Test() {
-  const dispatch = useDispatch();
-  const query = useMemo(() => {
-    return gql`
-      query($locale: String!) {
-        allToyprojectHomepages(lang: $locale) {
-          edges {
-            node {
-              sectionMainTitle
-              sectionMainDescription
-              sectionImage
-            }
-          }
+const query = gql`
+  query($locale: String!) {
+    allToyprojectHomepages(lang: $locale, uid: "mainpage") {
+      edges {
+        node {
+          sectionMainTitle
+          sectionMainDescription
+          sectionImage
         }
       }
-    `;
-  }, []);
+    }
+  }
+`;
+function Test() {
+  const dispatch = useDispatch();
   const { loading, error, data } = usePrismic(query);
   console.log(loading, data);
   if (loading) return <div>Loading...</div>;
