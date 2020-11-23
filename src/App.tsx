@@ -1,30 +1,36 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { gql } from 'apollo-boost';
 import usePrismic from './hooks/usePrismic';
 
-const QUERY = gql`
-  {
-    allToyprojectHomepages {
-      edges {
-        node {
-          sectionMainTitle
-          sectionMainDescription
-          sectionImage
+function App() {
+  const [lang, setLang] = useState('ko-kr');
+  const query = useMemo(() => {
+    return gql`
+      {
+        allToyprojectHomepages(lang: "${lang}") {
+          edges {
+            node {
+              sectionMainTitle
+              sectionMainDescription
+              sectionImage
+            }
+          }
         }
       }
-    }
-  }
-`;
-
-function App() {
+    `;
+  }, [lang]);
   console.log('rendered');
-  const { loading, error, data } = usePrismic(QUERY);
+  const { loading, error, data } = usePrismic(query);
   console.log(loading, data);
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!!!</div>;
   if (data) {
     return (
       <div className="App">
+        <div>
+          <button onClick={() => setLang('ko-kr')}>한국어</button>
+          <button onClick={() => setLang('en-us')}>영어</button>
+        </div>
         <h2>
           {data.allToyprojectHomepages.edges[0].node.sectionMainTitle[0].text}
         </h2>
