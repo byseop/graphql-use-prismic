@@ -4,8 +4,8 @@ pipeline {
         APP_NAME  = "toy-homepage-prismic"
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-        S3_BUCKET_DEV        = "toy-homepage-prismic-dev"
-        S3_BUCKET_PROD       = "toy-homepage-prismic-prod"
+        S3_BUCKET_DEV        = "toy-homepage-prismic.dev.omnious.co.kr"
+        S3_BUCKET_PROD       = "toy-homepage-prismic.prod.omnious.co.kr"
     }
     stages {
         stage('checkout') {

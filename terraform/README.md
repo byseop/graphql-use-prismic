@@ -6,8 +6,8 @@
 
 * IAM User, Policy: `toy-homepage-prismic` Jenkins 배포 스크립트에서 사용
 * S3 Bucket with static hosting: 
-  * `toy-homepage-prismic-dev`  --> `http://toy-homepage-prismic.dev.omnious.co.kr`
-  * `toy-homepage-prismic-prod` --> `http://toy-homepage-prismic.prod.omnious.co.kr`
+  * `toy-homepage-prismic.dev.omnious.co.kr`  --> `http://toy-homepage-prismic.dev.omnious.co.kr`
+  * `toy-homepage-prismic.prod.omnious.co.kr` --> `http://toy-homepage-prismic.prod.omnious.co.kr`
 
 * Route53 DNS: 
   * toy-homepage-prismic.dev.omnious.co.kr

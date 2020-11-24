@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket_dev" {
-  bucket = "toy-homepage-prismic-dev"
+  bucket = "toy-homepage-prismic.dev.omnious.co.kr"
   acl    = "public-read"
 
   website {
@@ -27,12 +27,12 @@ resource "aws_s3_bucket_policy" "policy_dev" {
         "Effect": "Allow",
         "Principal": "*",
         "Action": [
-            "s3:GetObject",
-            "s3:ListBucket"
+          "s3:GetObject",
+          "s3:ListBucket"
         ],
         "Resource": [
             "${aws_s3_bucket.bucket_dev.arn}",
-            "${aws_s3_bucket.bucket_dev.arn}/*",
+            "${aws_s3_bucket.bucket_dev.arn}/*"
         ]
     }
   ]
@@ -41,7 +41,7 @@ POLICY
 }
 
 resource "aws_s3_bucket" "bucket_prod" {
-  bucket = "toy-homepage-prismic-prod"
+  bucket = "toy-homepage-prismic.prod.omnious.co.kr"
   acl    = "public-read"
 
   website {
@@ -74,7 +74,7 @@ resource "aws_s3_bucket_policy" "policy_prod" {
         ],
         "Resource": [
             "${aws_s3_bucket.bucket_prod.arn}",
-            "${aws_s3_bucket.bucket_prod.arn}/*",
+            "${aws_s3_bucket.bucket_prod.arn}/*"
         ]
     }
   ]
