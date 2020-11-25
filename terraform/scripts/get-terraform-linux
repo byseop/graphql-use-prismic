@@ -1,0 +1,15 @@
+#!/bin/bash
+
+TERRAFORM_VERSION=0.13.5
+PLATFORM=linux_amd64
+
+TARGET_DIR=$(pwd)/bin
+
+TEMPFILE=$(mktemp)
+
+wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_${PLATFORM}.zip \
+-q -O ${TEMPFILE}
+
+unzip ${TEMPFILE} -d ${TARGET_DIR}
+
+rm ${TEMPFILE}
