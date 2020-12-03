@@ -57,7 +57,7 @@ module.exports.webhookForProd = async (event) => {
     try {
       const response = await axios({
         method: 'post',
-        url: 'https://common.jenkins.omnious.co.kr/job/toys/job/toy-graphql-use-prismic/job/develop/build',
+        url: 'https://common.jenkins.omnious.co.kr/job/toys/job/toy-graphql-use-prismic/job/master/build',
         headers: {
           'Content-Type': 'application/json',
         },
