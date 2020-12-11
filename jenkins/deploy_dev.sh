@@ -12,6 +12,6 @@ fi
 aws s3 rm s3://${S3_BUCKET_DEV} --recursive
 
 # Sync target s3 bucket
-aws s3 sync build s3://${S3_BUCKET_DEV} --delete --exclude "*.map"
+aws s3 sync public s3://${S3_BUCKET_DEV} --delete --exclude "*.map"
 
 

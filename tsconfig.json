@@ -15,11 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@modules": ["modules/*"],
-      "@pages": ["pages/*"],
-      "@hooks": ["hooks/*"]
+      "@*": ["src/*"]
     }
   },
   "include": ["src/**/*"],
