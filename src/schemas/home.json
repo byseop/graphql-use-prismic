@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "UID",
+        "placeholder": "메인페이지 URL"
+      }
+    },
+    "main_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "main-title-h1",
+        "placeholder": "메인페이지 타이틀 (h1)"
+      }
+    },
+    "main_title_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "main-title-image"
+      }
+    }
+  }
+}

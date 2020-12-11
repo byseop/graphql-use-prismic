@@ -11,4 +11,4 @@ fi
 aws s3 rm s3://${S3_BUCKET_PROD} --recursive
 
 # Sync target s3 bucket
-aws s3 sync build s3://${S3_BUCKET_PROD} --delete --exclude "*.map" --exclude "google*" --exclude "naver*"
+aws s3 sync public s3://${S3_BUCKET_PROD} --delete --exclude "*.map" --exclude "google*" --exclude "naver*"
