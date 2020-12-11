@@ -7,9 +7,9 @@ export default function ({ data }: { data: any }) {
     <>
       <Home data={data} />
       <hr />
-      <Link to="/ko-kr/main">한국어</Link>
+      <Link to="/ko-kr/home">한국어</Link>
       <br />
-      <Link to="/en-us/main">영어</Link>
+      <Link to="/en-us/home">영어</Link>
     </>
   );
 }
