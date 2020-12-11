@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../../components/Home/Home';
+import Home from '@components/Home/Home';
 import { graphql, Link } from 'gatsby';
 
 export default function ({ data }: { data: any }) {
