@@ -1,1 +1,3 @@
-# Homepage Toyproject
+## Toyproject
+
+GatsbyJS with headless CMS, Typescript.

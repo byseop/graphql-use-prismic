@@ -1,5 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
-
-Sitemap: https://gifted-fermi-b44b4c.netlify.app/sitemap.xml
