@@ -15,7 +15,7 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'toyproject',
-        accessToken: `${process.env.API_KEY}`,
+        accessToken: `${process.env.PRISMIC_API_KEY}`,
         linkResolver: ({ node, key, value }) => page => `/${page.uid}`,
         schemas: {
           home: require('./src/schemas/home.json')

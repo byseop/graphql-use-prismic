@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { navigate } from 'gatsby';
 
 export default function useLocalization() {
-  const lang = window.navigator.language;
   useEffect(() => {
-    const { pathname } = window.location;
+    const lang = window?.navigator.language;
+    const { pathname } = window?.location;
     const redirectURL = () => {
       switch (lang) {
         case 'ko':
@@ -16,5 +16,5 @@ export default function useLocalization() {
       }
     };
     navigate(redirectURL());
-  }, [lang]);
+  }, []);
 }
