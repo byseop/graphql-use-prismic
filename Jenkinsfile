@@ -37,7 +37,7 @@ pipeline {
                 // 추후 Test해 보면서 꼭 위 옵션을 넣기를 바랍니다
                 // (해당 옵션이 없으면 배포시점에서 yarn.lock 파일이 변경됩니다.)
                 // sh "yarn install --dev --frozen-lockfile"
-                sh "yarn install --dev -force"
+                sh "yarn install --dev"
             }
         }
         stage('lint and test') {
